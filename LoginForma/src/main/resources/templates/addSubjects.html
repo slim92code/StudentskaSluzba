@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
+-->
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style.css" type="text/css">
+        <script src="script.js" type="text/javascript" defer></script>
+    </head>
+    
+    <body>
+        <p>Subject name</p>
+        <input type="text" placeholder="Set Subject name" id="subjectName" required>
+        
+        <select id="professors">
+            <option th:each="professor : ${listProfessors}" th:value="${professor.ID}" th:text="${professor.ime+' '+professor.prezime}"></option>       
+        </select>
+        
+        <button id="addSubject" type="submit" onclick="addSubject()">Add Subject</button>
+        
+    </body>
+</html>

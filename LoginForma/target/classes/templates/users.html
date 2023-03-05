@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style.css" type="text/css">
+        <script src="script.js" type="text/javascript" defer></script> 
+
+        
+    </head>
+    
+    <body>
+
+        <h2>Lista korisnika</h2>
+        <table>
+            <tread>
+                <tr>
+                    <td>ID</td>
+                    <td>Username</td>
+                    <td>Password</td>
+                </tr>
+            </tread>
+            <tr th:each="user:${listUsers}">
+                <td th:text="${user.ID}"></td>
+                <td th:text="${user.ime}"></td>
+                <td th:text="${user.prezime}"></td>
+           </tr>
+        </table>
+    </body>
+</html>

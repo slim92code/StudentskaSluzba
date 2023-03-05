@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style.css" type="text/css">
+        <script src="script.js" type="text/javascript" defer></script> 
+        
+    </head>
+
+    <script th:inline="javascript">
+        var permission = "[[${permission}]]";
+    </script>
+
+    
+    <body onload="load()">
+        
+        <header>
+            <ul id="navbar">
+                <li><a href="/" class="active">Pocetna</a></li>
+            </ul>
+        </header>
+        
+        <div class="loginForm">
+      
+            <h2>Login Form</h2>
+            <div class="container">
+
+                <p>Username</p>
+                <input type="text" placeholder="Enter Username" id="username" required>
+
+                <p>Password</p>
+                <input type="password" placeholder="Enter Password" id="password" required>
+
+                <p id="error" class="error"></p>
+
+                <button id="dugmeLogin" type="submit" onclick="loginDugme()">Login</button>
+
+                <label>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style.css" type="text/css">
+        <script src="script.js" type="text/javascript" defer></script> 
+        
+    </head>
+    <body>
+        <h2 th:text="${gradeExam.predmet.imePredmeta}"></h2>
+        <h3 th:text="' '+${gradeExam.student.brojIndeksa}+'/'+${gradeExam.student.godinaUpisa}+' ' "></h3>
+        
+        <select id="grade">
+            <option value=5>5</option>
+            <option value=6>6</option>
+            <option value=7>7</option>
+            <option value=8>8</option>
+            <option value=9>9</option>
+            <option value=10>10</option>
+        </select>
+        <button th:onclick="'oceniIspit('+${gradeExam.ID}+')'" type="submit">Oceni</button>
+    </body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style.css" type="text/css">
+        <script src="script.js" type="text/javascript" defer></script>
+    </head>
+
+    <body>
+
+        <h2>Sign Up</h2>
+
+            <div class="container">
+
+                <p>Set Username</p>
+                <input type="text" placeholder="Set Username" id="username" required>
+
+                <p>Set Password</p>
+                <input type="password" placeholder="Set Password" id="password" required>
+
+                <p>Set First Name</p>
+                <input type="text" placeholder="Set First Name" id="firstName" required>
+
+                <p>Set Last Name</p>
+                <input type="text" placeholder="Set Last Name" id="lastName" required>
+                
+                <select id="permission">
+                    <option onclick="clearFields()" value=3>Administrator</option>
+                    <option onclick="addFields()" value=1>Student</option>
+                    <option onclick="clearFields()" value=2>Profesor</option>
+                    
+                </select>
+                
+                <div id="dodatno">
+                    
+                </div>
+
+
+
+                <button id="dugmeRegistracija" type="submit" onclick="registracija()">Sign Up</button> 
+
+            </div>
+
+    </body>
+
+</html>
